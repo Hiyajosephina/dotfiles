@@ -19,15 +19,12 @@ local lain = require('lain')
 local dpi = require("beautiful.xresources").apply_dpi
 
 -- Loading the widgets from awesome-wm-widgets (github.com/streetturtle/awesome-wm-widgets)
-local cpu_widget = require("awesome-wm-widgets.cpu-widget.cpu-widget")
-local brightness_widget = require(
-                              "awesome-wm-widgets.brightness-widget.brightness")
-local volume_widget = require("awesome-wm-widgets.volume-widget.volume")
-local logout_menu_widget = require(
-                               "awesome-wm-widgets.logout-menu-widget.logout-menu")
-local net_speed_widget =
-    require("awesome-wm-widgets.net-speed-widget.net-speed")
-local pacman_widget = require("awesome-wm-widgets.pacman-widget.pacman")
+local cpu_widget = require("widgets.cpu-widget.cpu-widget")
+local brightness_widget = require("widgets.brightness-widget.brightness")
+local volume_widget = require("widgets.volume-widget.volume")
+local logout_menu_widget = require("widgets.logout-menu-widget.logout-menu")
+local net_speed_widget = require("widgets.net-speed-widget.net-speed")
+local pacman_widget = require("widgets.pacman-widget.pacman")
 -- Loading the theme
 local theme_path = string.format('%s/.config/awesome/themes/%s/theme.lua',
                                  os.getenv('HOME'), 'Morning')
