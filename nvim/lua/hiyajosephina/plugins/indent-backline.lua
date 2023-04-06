@@ -10,7 +10,12 @@ vim.opt.list = true
 vim.opt.listchars:append "space:⋅"
 vim.opt.listchars:append "eol:↴"
 
-require("indent_blankline").setup {
+local status, indent_blankline = pcall(require, "indent_blankline")
+if not status then return end
+
+indent_blankline.setup {
+    enabled = true,
+    colored_indent_levels = false,
     space_char_blankline = " ",
     char_highlight_list = {
         "IndentBlanklineIndent1", "IndentBlanklineIndent2",

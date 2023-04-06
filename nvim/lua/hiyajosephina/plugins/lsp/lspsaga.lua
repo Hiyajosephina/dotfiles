@@ -7,5 +7,8 @@ saga.setup({
     -- use enter to open file with finder
     finder_action_keys = {open = "<CR>"},
     -- use enter to open file with definition preview
-    definition_action_keys = {edit = "<CR>"}
+    definition_action_keys = {edit = "<CR>"},
+    ui = {
+        kind = require("catppuccin.groups.integrations.lsp_saga").custom_kind()
+    }
 })
