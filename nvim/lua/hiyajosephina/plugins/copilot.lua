@@ -1,6 +1,4 @@
 local status, copilot = pcall(require, "Copilot")
-if not status then
-    return
-end
+if not status then return end
 copilot.setup()
 copilot.enable()
