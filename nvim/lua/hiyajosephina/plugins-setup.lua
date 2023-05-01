@@ -31,8 +31,6 @@ return packer.startup(function(use)
 
     use("wbthomason/packer.nvim") -- packer
     use("nvim-lua/plenary.nvim") -- plenary, used by many other plugins
-    use("rafamadriz/neon") -- neon theme
-    use("lunarvim/synthwave84.nvim") -- synthwave colorscheme
     use("christoomey/vim-tmux-navigator") -- tmux and window nav
     use("szw/vim-maximizer") -- maximize windows    
     use("tpope/vim-surround") -- surround text with character
@@ -75,13 +73,13 @@ return packer.startup(function(use)
     use("lukas-reineke/indent-blankline.nvim") -- indent colorizer
     use('edluffy/hologram.nvim') -- image viewer
     use('lewis6991/spellsitter.nvim') -- spellcheck
-    use {
-        "ahmedkhalf/project.nvim",
-        config = function() require("project_nvim").setup {} end
-    }
+    use("ahmedkhalf/project.nvim") -- project management?? I forgor💀
 
     use('github/copilot.vim') -- copilot
     use {"catppuccin/nvim", as = "catppuccin"} -- catppuccin theme
+    use({"akinsho/toggleterm.nvim", tag = '*'}) -- terminal
+    use({'toppair/peek.nvim', run = 'deno task --quiet build:fast'}) -- markdown preview
+    use("folke/todo-comments.nvim")
     -- plugins end
 
     if packer_bootstap then require("packer").sync() end

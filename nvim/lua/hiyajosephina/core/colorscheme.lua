@@ -20,15 +20,15 @@ catppuccin.setup({
         -- bold, italic, underline, undercurl, reverse, strikethrough, none
         comments = {"italic"},
         conditionals = {"bold"},
-        loops = {"undercurl"},
+        loops = {"bold"},
         functions = {"italic", "bold"},
         keywords = {"bold"},
-        strings = {},
+        strings = {"italic"},
         variables = {},
         numbers = {},
         booleans = {},
         properties = {},
-        types = {"italic"},
+        types = {},
         operators = {}
     },
     color_overrides = {},

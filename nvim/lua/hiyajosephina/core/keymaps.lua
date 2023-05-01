@@ -51,3 +51,37 @@ keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current c
 
 -- restart lsp server (not on youtube nvim video)
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
+
+-- toggle term
+keymap.set("n", "<leader>tt", ":ToggleTerm<CR>")
+keymap.set("t", "<leader>tt", "<C-\\><C-n>:ToggleTerm<CR>")
+keymap.set("t", "<esc>", "<C-\\><C-n>:ToggleTerm<CR>")
+keymap.set("t", "<C-w>", "<C-\\><C-n>:ToggleTerm<CR>")
+keymap.set("t", "<C-h>", "<C-\\><C-n><C-w>h")
+keymap.set("t", "<C-j>", "<C-\\><C-n><C-w>j")
+keymap.set("t", "<C-k>", "<C-\\><C-n><C-w>k")
+keymap.set("t", "<C-l>", "<C-\\><C-n><C-w>l")
+
+-- peek
+keymap.set("n", "<leader>po", ":PeekOpen<CR>")
+keymap.set("n", "<leader>pc", ":PeekClose<CR>")
+keymap.set("n", "<leader>pt", ":PeekToggle<CR>")
+
+-- todo-comments
+keymap.set("n", "<leader>td", ":TodoTelescope<CR>")
+
+-- disable arrow keys in normal mode
+keymap.set("n", "<up>", "<nop>")
+keymap.set("n", "<down>", "<nop>")
+keymap.set("n", "<left>", "<nop>")
+keymap.set("n", "<right>", "<nop>")
+-- disable arrow keys in insert mode
+keymap.set("i", "<up>", "<nop>")
+keymap.set("i", "<down>", "<nop>")
+keymap.set("i", "<left>", "<nop>")
+keymap.set("i", "<right>", "<nop>")
+-- disable arrow keys in visual mode
+keymap.set("v", "<up>", "<nop>")
+keymap.set("v", "<down>", "<nop>")
+keymap.set("v", "<left>", "<nop>")
+keymap.set("v", "<right>", "<nop>")
