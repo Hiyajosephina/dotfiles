@@ -21,7 +21,6 @@ null_ls.setup({
         formatting.prettier.with({{args = {"--tab-width=4"}}}),
         formatting.lua_format, diagnostics.actionlint, diagnostics.djlint,
         diagnostics.gitlint, diagnostics.hadolint, diagnostics.shellcheck,
-        diagnostics.sqlfluff, -- formatting.rustfmt,
         -- code_actions.refactoring,
         -- null_ls.builtins.formatting.dprint,
         diagnostics.vale, formatting.asmfmt

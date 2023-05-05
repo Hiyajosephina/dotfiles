@@ -32,13 +32,11 @@ mason_lspconfig.setup({
         "jsonls", -- JSON 
         "jdtls", -- Java
         "tsserver", -- Javescript/Typescript  
-        "ltex", -- Latex    
         "lua_ls", -- Lua
         "marksman", -- Markdown
         "perlnavigator", -- Perl
         "jedi_language_server", -- Python
         "rust_analyzer", -- Rust
-        "sqlls", -- SQL
         "taplo", -- TOML
         "tailwindcss" -- Tailwind CSS
     },
@@ -61,7 +59,6 @@ mason_null_ls.setup({
         "vale", -- markdown tex asciidoc
         "black", -- python
         "shellcheck", -- sh
-        "sqlfluff", -- sql
         "taplo", -- toml
         "actionlint" -- yaml
     }

@@ -87,8 +87,6 @@ lspconfig["jdtls"].setup({capabilities = capabilities, on_attach = on_attach})
 -- configure typescript server with plugin
 typescript.setup({server = {capabilities = capabilities, on_attach = on_attach}})
 
-lspconfig["ltex"].setup({capabilities = capabilities, on_attach = on_attach})
-
 -- configure lua server (with special settings)
 lspconfig["lua_ls"].setup({
     capabilities = capabilities,
@@ -125,8 +123,6 @@ lspconfig["rust_analyzer"].setup({
     capabilities = cmp_nvim_lsp.default_capabilities(),
     on_attach = on_attach
 })
-
-lspconfig["sqlls"].setup({capabilities = capabilities, on_attach = on_attach})
 
 lspconfig["taplo"].setup({capabilities = capabilities, on_attach = on_attach})
 
