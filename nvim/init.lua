@@ -1,25 +1,16 @@
-require("hiyajosephina.plugins-setup")
-require("hiyajosephina.core.options")
-require("hiyajosephina.core.colorscheme")
-require("hiyajosephina.core.keymaps")
-require("hiyajosephina.plugins.comment")
-require("hiyajosephina.plugins.nvim-tree")
-require("hiyajosephina.plugins.lualine")
-require("hiyajosephina.plugins.telescope")
-require("hiyajosephina.plugins.nvim-cmp")
-require("hiyajosephina.plugins.lsp.mason")
-require("hiyajosephina.plugins.lsp.lspsaga")
-require("hiyajosephina.plugins.lsp.lspconfig")
-require("hiyajosephina.plugins.lsp.null-ls")
-require("hiyajosephina.plugins.autopairs")
-require("hiyajosephina.plugins.treesitter")
-require("hiyajosephina.plugins.gitsgins")
-require("hiyajosephina.plugins.nvim-colorizer")
-require("hiyajosephina.plugins.indent-backline")
-require("hiyajosephina.plugins.spellsitter")
-require("hiyajosephina.plugins.hologram")
-require("hiyajosephina.plugins.copilot")
-require("hiyajosephina.plugins.project-nvim")
-require("hiyajosephina.plugins.toggleterm")
-require("hiyajosephina.plugins.peek")
-require("hiyajosephina.plugins.todo")
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+	vim.fn.system({
+		"git",
+		"clone",
+		"--filter=blob:none",
+		"https://github.com/folke/lazy.nvim.git",
+		"--branch=stable", -- latest stable release
+		lazypath,
+	})
+end
+vim.opt.rtp:prepend(lazypath)
+
+require("options")
+require("keymaps")
+require("lazy").setup("plugins")
