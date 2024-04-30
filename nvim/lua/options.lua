@@ -16,7 +16,6 @@ opt.wrap = false
 -- searching
 opt.ignorecase = true
 opt.smartcase = true
-
 -- cursorline
 opt.cursorline = true
 
@@ -37,3 +36,8 @@ opt.splitbelow = true
 
 -- hyphenated words are one word
 opt.iskeyword:append("-")
+
+-- show spaces and eol
+opt.list = true
+opt.listchars:append "space:⋅"
+opt.listchars:append("eol:↴")
