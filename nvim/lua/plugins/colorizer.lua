@@ -1,9 +1,7 @@
 return {
 	{
 		"norcalli/nvim-colorizer.lua",
-		config = function()
-			require("colorizer").setup()
-		end,
+		config = true,
 	},
 	{
 		"lukas-reineke/indent-blankline.nvim",
@@ -32,6 +30,13 @@ return {
 			end)
 
 			require("ibl").setup({ indent = { highlight = highlight, tab_char = "▎" } })
+		end,
+	},
+	{
+		"HiPhish/rainbow-delimiters.nvim",
+		dependencies = { "nvim-treesitter/nvim-treesitter" },
+		config = function()
+			require("rainbow-delimiters.setup").setup()
 		end,
 	},
 }

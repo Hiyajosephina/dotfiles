@@ -1,10 +1,11 @@
 return {
     {
         "windwp/nvim-autopairs",
-        config = function()
-            require("nvim-autopairs").setup({
-                check_ts = true,
-            })
-        end,
+        event = "InsertEnter",
+        config = true,
+    },
+    {
+        "windwp/nvim-ts-autotag",
+        config = true,
     },
 }
