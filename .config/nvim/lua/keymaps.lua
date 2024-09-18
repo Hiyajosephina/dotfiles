@@ -38,3 +38,9 @@ keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
 
 -- dismiss noice message
 keymap.set("n", "<leader>nd", "<cmd>NoiceDismiss<CR>")
+
+-- Navigate with tmux
+keymap.set("n", "<C-h>", ":wincmd h<CR>")
+keymap.set("n", "<C-j>", ":wincmd j<CR>")
+keymap.set("n", "<C-k>", ":wincmd k<CR>")
+keymap.set("n", "<C-l>", ":wincmd l<CR>")

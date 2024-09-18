@@ -17,7 +17,13 @@ return {
 		config = function()
 			local lspconfig = require("lspconfig")
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
+            
+			lspconfig.gopls.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.jdtls.setup({
+				capabilities = capabilities,
+			})
 			lspconfig.kotlin_language_server.setup({
 				capabilities = capabilities,
 			})
